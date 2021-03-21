@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="styles.css" href="styles.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Interactive pricing component</title>
+
 </head>
+
 <body>
+  <main>
+    <header>
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial.</p>
+      <p>No credit card required.</p>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+    </header>
+    <form class="form">
+      <label class="slider--label" for="price"></label>
+      <input class="slider--input" type="range" id="price" title="price">
+      <p class="slider--views-status"><output class="slider--views-output" for="price"></output>K Pageviews</p>
+      <p class="slider--price-status">
+        <abbr title="USD">$</abbr><output class="slider--price-output" for="price"></output>
+        /
+        <output class="slider--billing-output" for="billing"></output>
 
-  Pageviews
-  $ /month
+      </p>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+      <div class="toggle">
+        <label class="toggle--label toggle--monthly" for="billing">Monthly Billing</label>
+        <label class="toggle--label toggle--yearly" for="billing">Yearly Billing<span
+            class="toggle--discount">-25%</span></label>
+        <div class="toggle--switch">
+          <input class="toggle--checkbox" type="checkbox" id="billing" title="monthly/yearly billing toggle">
+          <span class="toggle--slider"></span>
+        </div>
+      </div>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
+      <ol class="feature-list">
+        <li class="feature-list--item">Unlimited websites</li>
+        <li class="feature-list--item">100% data ownership</li>
+        <li class="feature-list--item">Email reports</li>
+      </ol>
 
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <button class="btn--submit" type="submit">Start my trial</button>
+    </form>
+  </main>
 </body>
+
 </html>
