@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive pricing component solution
 
-Second project in my series on simply frontend challengs. I find this is a good way to expose myself to new requirements and explore aspects of semantic HTML, new CSS selectors and properties, and browser support that I have not yet come across professionally. 
+Second project in my series on simple frontend challengs. I find this is a good way to expose myself to new requirements and explore aspects of semantic HTML, new CSS selectors and properties, and browser support that I have not yet come across professionally. 
 
 See the challenge details here: [Interactive pricing component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8).
 
