@@ -7,7 +7,9 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="styles.css" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
 
   <title>Interactive pricing component</title>
 
@@ -15,38 +17,55 @@
 
 <body>
   <main>
+    <svg class="img--bg-pattern" xmlns="http://www.w3.org/2000/svg" width="1440" height="449">
+      <path fill="#F1F5FE" fill-rule="evenodd" d="M0 0h1440v449H191.5C85.737 449 0 363.263 0 257.5V0z" />
+    </svg>
+    <svg class="img--circles" xmlns="http://www.w3.org/2000/svg" width="146" height="145">
+      <g fill="none" fill-rule="evenodd" stroke="#CFD8EF">
+        <circle cx="63" cy="82" r="62.5" />
+        <circle cx="105" cy="41" r="40.5" />
+      </g>
+    </svg>
     <header>
-      <h1>Simple, traffic-based pricing</h1>
-      <p>Sign-up for our 30-day trial.</p>
-      <p>No credit card required.</p>
-
+      <h1 class="header--title">Simple, traffic-based pricing</h1>
+      <p class="header--sub-text">Sign-up for our 30-day trial.</p>
+      <p class="header--sub-text">No credit card required.</p>
     </header>
     <form class="form">
       <label class="slider--label" for="price"></label>
-      <input class="slider--input" type="range" id="price" title="price">
-      <p class="slider--views-status"><output class="slider--views-output" for="price"></output>K Pageviews</p>
+      <input class="slider--input" type="range" id="price" value="16" min="8" max="36" step="4" title="price"  list="options"
+        oninput="document.getElementsByClassName('slider--price-output')[0].value=this.value; 
+                 document.getElementsByClassName('slider--views-output')[0].value=this.value*10">
+                 <datalist id="options">
+                   <option>8</option>
+                   <option>12</option>
+                   <option>16</option>
+                   <option>24</option>
+                   <option>36</option>
+                 </datalist>
+      <p class="slider--views-status"><output class="slider--views-output" for="price">100</output>K Pageviews</p>
       <p class="slider--price-status">
-        <abbr title="USD">$</abbr><output class="slider--price-output" for="price"></output>
-        /
-        <output class="slider--billing-output" for="billing"></output>
+        <output class="slider--price-output" for="price">$16.00</output>
+        <output class="slider--billing-output" for="billing">/ month</output>
 
       </p>
 
       <div class="toggle">
-        <label class="toggle--label toggle--monthly" for="billing">Monthly Billing</label>
-        <label class="toggle--label toggle--yearly" for="billing">Yearly Billing<span
-            class="toggle--discount">-25%</span></label>
-        <div class="toggle--switch">
+        <p class="toggle--label toggle--monthly" for="billing">Monthly Billing</p>
+        <label class="toggle--switch">
           <input class="toggle--checkbox" type="checkbox" id="billing" title="monthly/yearly billing toggle">
           <span class="toggle--slider"></span>
-        </div>
+        </label>
+        <p class="toggle--label toggle--yearly" for="billing">Yearly Billing<span
+            class="toggle--discount">-25%</span></p>
       </div>
+      <hr>
 
-      <ol class="feature-list">
+      <ul class="feature-list">
         <li class="feature-list--item">Unlimited websites</li>
         <li class="feature-list--item">100% data ownership</li>
         <li class="feature-list--item">Email reports</li>
-      </ol>
+      </ul>
 
       <button class="btn--submit" type="submit">Start my trial</button>
     </form>
