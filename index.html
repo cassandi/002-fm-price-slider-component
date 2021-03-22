@@ -33,21 +33,13 @@
     </header>
     <form class="form">
       <label class="slider--label" for="price"></label>
-      <input class="slider--input" type="range" id="price" value="16" min="8" max="36" step="4" title="price"  list="options"
-        oninput="document.getElementsByClassName('slider--price-output')[0].value=this.value; 
+      <input class="slider--input" type="range" id="price" value="3" min="1" max="5" step="1" title="price"  list="options"
+        oninput="document.getElementsByClassName('slider--price-value')[0].value=this.value; 
                  document.getElementsByClassName('slider--views-output')[0].value=this.value*10">
-                 <datalist id="options">
-                   <option>8</option>
-                   <option>12</option>
-                   <option>16</option>
-                   <option>24</option>
-                   <option>36</option>
-                 </datalist>
       <p class="slider--views-status"><output class="slider--views-output" for="price">100</output>K Pageviews</p>
       <p class="slider--price-status">
-        <output class="slider--price-output" for="price">$16.00</output>
+        <span class="slider--price-output">$</span><output class="slider--price-value" for="price">3</output><span class="slider--price-output">.00</span>
         <output class="slider--billing-output" for="billing">/ month</output>
-
       </p>
 
       <div class="toggle">
