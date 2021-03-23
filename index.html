@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="index.js"></script>
 
   <title>Interactive pricing component</title>
 
@@ -33,19 +34,18 @@
     </header>
     <form class="form">
       <label class="slider--label" for="price"></label>
-      <input class="slider--input" type="range" id="price" value="3" min="1" max="5" step="1" title="price"  list="options"
-        oninput="document.getElementsByClassName('slider--price-value')[0].value=this.value; 
-                 document.getElementsByClassName('slider--views-output')[0].value=this.value*10">
-      <p class="slider--views-status"><output class="slider--views-output" for="price">100</output>K Pageviews</p>
+      <input class="slider--input" type="range" id="price" autocomplete="off" min="1" max="5" step="1" title="price"  list="options"
+        oninput="onPriceChanged()">
+      <p class="slider--views-status"><output class="slider--views-output" for="price">100</output> Pageviews</p>
       <p class="slider--price-status">
-        <span class="slider--price-output">$</span><output class="slider--price-value" for="price">3</output><span class="slider--price-output">.00</span>
-        <output class="slider--billing-output" for="billing">/ month</output>
+        <span class="slider--price-output">$</span><output class="slider--price-value" for="price">16</output><span class="slider--price-output">.00</span>
+        <span>/</span><output class="slider--billing-output" for="billing">month</output>
       </p>
 
       <div class="toggle">
         <p class="toggle--label toggle--monthly" for="billing">Monthly Billing</p>
         <label class="toggle--switch">
-          <input class="toggle--checkbox" type="checkbox" id="billing" title="monthly/yearly billing toggle">
+          <input class="toggle--checkbox" type="checkbox" autocomplete="off" id="billing" title="monthly/yearly billing toggle" oninput="onBillingChanged()">
           <span class="toggle--slider"></span>
         </label>
         <p class="toggle--label toggle--yearly" for="billing">Yearly Billing<span
