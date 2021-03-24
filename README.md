@@ -12,16 +12,6 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Use the slider and toggle to see prices for different page view numbers
 
-### Screenshot
-
-#### Mobile
-
-![](images/mobile.png)
-
-#### Desktop
-
-![](images/desktop.png)
-
 ### Links
 
 - [CodeSandbox](https://codesandbox.io/s/fm-002-pricing-component-i3ugk?file=/index.html)
@@ -35,4 +25,12 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 
-### What I learned
+### Screenshot
+
+#### Desktop
+
+![](images/desktop.png)
+
+#### Mobile
+
+![](images/mobile.png)
