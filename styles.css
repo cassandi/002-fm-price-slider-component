@@ -4,6 +4,7 @@ TODO:
 
 - where reasonable, use a common factor to derive spacing and element sizes rather than mockup values
 - find a js solution for Chrome lack of partial styling of range track
+- add focus styles to range & toggle
 
 */
 
@@ -327,6 +328,11 @@ hr {
   border: none;
   border-radius: 20.5px;
   font-size: 12px;
+}
+
+.btn--submit:hover {
+  color: var(--white);
+  cursor: pointer;
 }
 
 /* 
